@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  test:
+  Test:
     runs-on: ${{ matrix.os }}
     env:
       HOST: localhost
@@ -38,7 +38,7 @@ jobs:
       run: go test -v main_test.go 
       
   
-  build:
+  Build_main:
     needs: test
     runs-on: ubuntu-latest
     steps:
