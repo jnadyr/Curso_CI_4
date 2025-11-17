@@ -39,7 +39,7 @@ jobs:
       
   
   Build_main:
-    needs: test
+    needs: Test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -61,6 +61,6 @@ jobs:
     secrets: inherit
 
   Deploy_EC2:
-    needs: build
+    needs: Build_main
     uses: ./.github/workflows/EC2.yml
     secrets: inherit
