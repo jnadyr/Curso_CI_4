@@ -11,10 +11,12 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: setup Docker Build
-      uses: docker/setup-buildx-action@v2.0.0
+     # uses: docker/setup-buildx-action@v2.0.0
+      uses: docker/setup-buildx-action@v3.11.1
       
     - name: Download a Build Artifact
       uses: actions/download-artifact@v3.0.0
+      
       with:
     # Artifact name
         name: programa
@@ -25,7 +27,7 @@ jobs:
       uses: docker/login-action@v2.0.0
       with:
     # Username used to log against the Docker registry
-        username: leonardosartorello
+        username: jnadyr
     # Password or personal access token used to log against the Docker registry
         password: ${{ secrets.PASSWORD_DOCKER_HUB }}
         
