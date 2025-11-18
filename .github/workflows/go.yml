@@ -24,7 +24,9 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Set up Go
+uses: actions/checkout@v3 
       uses: actions/setup-go@v3
+#O comando é uma ação (action) essencial do GitHub Actions que tem como principal função clonar o repositório Git onde o workflow está sendo executado para o ambiente de execução (o "runner"). 
       with:
         go-version: ${{ matrix.go_version }}
       
@@ -43,11 +45,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+#O comando é uma ação (action) essencial do GitHub Actions que tem como principal função clonar o repositório Git onde o workflow está sendo executado para o ambiente de execução (o "runner"). 
     - name: Build
       run: go build -v main.go
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v5.0.0
+# O comando actions/upload-artifact@v5.0.0 é uma ação oficial do GitHub Actions usada para salvar (fazer upload) arquivos e diretórios gerados durante a execução de um workflow  
+uses: 
       with:
     # Artifact name
         name: programa
