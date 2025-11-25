@@ -15,7 +15,7 @@ jobs:
     # Artifact name
         name: programa
     # inserido o nome do artefato no path
-    #   path: .
+        path: . # colocado agora+1
 
     - uses: actions/checkout@v3
 
