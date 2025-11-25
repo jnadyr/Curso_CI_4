@@ -13,6 +13,8 @@ jobs:
       with:
     # Artifact name
         name: programa
+#linha tentativa de correcao do job
+        path: .
 
     - uses: actions/checkout@v3
 
