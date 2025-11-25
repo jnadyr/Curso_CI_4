@@ -52,7 +52,7 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v5.0.0
 # O comando actions/upload-artifact@v5.0.0 é uma ação oficial do GitHub Actions usada para salvar (fazer upload) arquivos e diretórios gerados durante a execução de um workflow  
-uses: 
+#uses: 
       with:
     # Artifact name
         name: programa
