@@ -13,6 +13,8 @@ jobs:
       with:
     # Artifact name
         name: programa
+    # inserido o nome do artefato no path
+        path: main
 
     - uses: actions/checkout@v3
 
