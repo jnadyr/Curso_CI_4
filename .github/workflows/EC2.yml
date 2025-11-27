@@ -9,7 +9,7 @@ jobs:
     steps:
     
     - uses: actions/checkout@v3
-    
+    #clona o repositório onde o fluxo de trabalho (workflow) está sendo executado para dentro do ambiente de execução (runner)
     - name: Download a Build Artifact
     #  uses: actions/download-artifact@v3.0.0
     #  uses: actions/download-artifact@v6.0.0 removido agora!
