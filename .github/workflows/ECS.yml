@@ -31,3 +31,11 @@ jobs:
             DBNAME=${{ secrets.DBNAME }}
             DBPORT=${{ secrets.DBPORT }}
             PORT=8000
+
+     - name: Deploy Amazon ECS task definition
+       uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+       with:
+        task-definition: ${{ steps.task-def.outputs.task-definition }}
+        service: Servico_API-Go # (Nome do serviço lá na AWS)
+        cluster: API-Go # (Nome do cluster lá na AWS)
+        wait-for-service-stability: true # Não se sobe o serviço e vai-se adiante! Aguarda-se para ver se está tudo OK!
